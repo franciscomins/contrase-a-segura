@@ -1,0 +1,29 @@
+.card-shadow{
+    box-shadow: 7px 9px 50px 6px rgb(0, 0, 0);
+    background-color: #04195f;
+    color: rgb(255, 255, 255);
+    text-align: center;
+
+}
+
+
+
+#sec-password-card{
+    background-color: #000c38;
+
+
+}
+html{
+    background-color: #000c38;
+}
+#navbar{
+    background-color: #000c38;
+}
+#sec-nav{
+    background-color: #000c38;
+}
+
+.vic{
+    text-decoration: none;
+    color: rgb(163, 163, 163);
+}
