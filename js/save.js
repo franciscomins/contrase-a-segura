@@ -1,6 +1,15 @@
-import {savePassword} from './firebase.js'
+import {savePassword, getPass} from './firebase.js'
 
 const passForm = document.getElementById('pass-form');
+
+window.addEventListener('DOMContentLoaded', async() =>{
+   const querySnapshot= await  getPass()
+
+   querySnapshot.forEach(doc=>{
+    console.log.apply(doc)
+   });
+
+})
 
 
 passForm.addEventListener('submit', e => {
@@ -12,4 +21,6 @@ passForm.addEventListener('submit', e => {
 
     //console.log(site.value, username.value, password.value)
     savePassword(site.value, username.value, password.value)
+
+    passForm.reset()
 })
