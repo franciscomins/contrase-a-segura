@@ -1,4 +1,4 @@
-    import {savePassword} from './firebase.js'
+import {savePassword} from './firebase.js'
 
 const passForm = document.getElementById('pass-form');
 
@@ -10,5 +10,6 @@ passForm.addEventListener('submit', e => {
     const username = passForm['pass-username']
     const password = passForm['pass-password']
 
+    //console.log(site.value, username.value, password.value)
     savePassword(site.value, username.value, password.value)
 })
