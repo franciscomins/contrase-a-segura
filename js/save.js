@@ -1,22 +1,14 @@
+    import {savePassword} from './firebase.js'
 
-        const passwordForm = document.getElementById("passwordForm");
-        const siteNameInput = document.getElementById("siteName");
-        const usernameInput = document.getElementById("username");
-        const passwordInput = document.getElementById("password");
-        const passwordList = document.getElementById("passwordList");
+const passForm = document.getElementById('pass-form');
 
-        passwordForm.addEventListener("submit", function (event) {
-            event.preventDefault();
-            const siteName = siteNameInput.value;
-            const username = usernameInput.value;
-            const password = passwordInput.value;
-            const listItem = document.createElement("li");
-            listItem.textContent = `Sitio: ${siteName}, Usuario: ${username}, Contraseña: ${password}`;
-            passwordList.appendChild(listItem);
-            // Limpia los campos del formulario después de agregar la contraseña.
-            siteNameInput.value = "";
-            usernameInput.value = "";
-            passwordInput.value = "";
-        });
-        
-    
+
+passForm.addEventListener('submit', e => {
+    e.preventDefault();
+
+    const site = passForm['pass-site']
+    const username = passForm['pass-username']
+    const password = passForm['pass-password']
+
+    savePassword(site.value, username.value, password.value)
+})
