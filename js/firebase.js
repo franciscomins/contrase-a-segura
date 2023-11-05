@@ -4,6 +4,11 @@ import { getFirestore,
          collection,
          addDoc,
          getDocs,
+         onSnapshot,
+         deleteDoc,
+         doc,
+         getDoc,
+         updateDoc,
    } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
 
 // Your web app's Firebase configuration
@@ -26,4 +31,14 @@ const db = getFirestore(app);
 export const savePassword = (site, username, password) =>
   addDoc(collection(db, "passwords"), { site, username, password });
 
-export const getPass = () => getDocs(collection(db,"passwords"))
+export const getPass = () => getDocs(collection(db,'passwords'))
+
+export const onGetPass = (callback) => onSnapshot(collection(db,'passwords'),callback)
+
+export const deletePass = id => deleteDoc(doc(db, 'passwords', id))
+
+export const editPass = id => getDoc(doc(db, 'passwords', id))
+
+export const updatePass = (id, newFields) =>
+ updateDoc(doc(db, 'passwords',id), newFields);
+

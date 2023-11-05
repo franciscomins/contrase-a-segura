@@ -6,7 +6,12 @@
 
 }
 
-
+.card-shadow-text{
+    box-shadow: 7px 9px 50px 6px rgb(0, 0, 0);
+    background-color: #04195f;
+    color: rgb(255, 255, 255);
+   
+}
 
 #sec-password-card{
     background-color: #000c38;
@@ -26,4 +31,12 @@ html{
 .vic{
     text-decoration: none;
     color: rgb(163, 163, 163);
+}
+.btn-show{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 20%;
+    border-color: white;
+    
 }
