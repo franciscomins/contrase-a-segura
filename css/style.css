@@ -4,6 +4,8 @@
     color: rgb(255, 255, 255);
     text-align: center;
 
+   
+
 }
 
 .card-shadow-text{
@@ -30,13 +32,38 @@ html{
 
 .vic{
     text-decoration: none;
-    color: rgb(163, 163, 163);
+    color: #000;
 }
 .btn-show{
-    width: 30px;
-    height: 30px;
+    width: 70px;
+    height: 70px;
     text-align: center;
     border-radius: 20%;
     border-color: white;
     
+}
+.btnList{
+    margin-top: 30px;
+    width:200px ;
+    height: 70px;
+    font-size: 30px;
+  
+}
+.btnSave{
+    height: 70px;
+    font-size: 30px;
+}
+a{
+    font-size: 30px;
+}
+.navbar-brand{
+    font-size: 35px;
+}
+
+
+.h1 {
+    font-size: 70px; /* Tamaño de fuente más grande para títulos */
+}
+p{
+    font-size: 40px; /* Tamaño de fuente más grande para títulos */
 }
