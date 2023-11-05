@@ -155,6 +155,8 @@ window.addEventListener('DOMContentLoaded', async () => {
                         <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
                         </svg>
                         `;
+                        window.navigator.vibrate([3000]);
+
                     isShowingPassword = true;
                     // Deshabilita el botón durante 10 segundos
                     btn.disabled = true;
@@ -166,9 +168,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                         <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                         </svg>
                         `;
-                        window.navigator.vibrate([3000]);
                         isShowingPassword = false;
                         btn.disabled = false; // Habilita el botón nuevamente
+                        window.navigator.vibrate([100]);
 
                     }, 5000); // 10 segundos en milisegundos
                 }
