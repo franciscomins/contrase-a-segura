@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             passContainer.innerHTML += `
        
             <div class="container mb-5 mt-3">
-                <h5 class="mt-3"> ${pass.site}</h5>
+                <h5 class="mt-3 h1"> ${pass.site}</h5>
 
                 <p>Usuario: ${pass.username} </p>
                 
