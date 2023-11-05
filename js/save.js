@@ -32,14 +32,14 @@ window.addEventListener('DOMContentLoaded', async () => {
                 <p>Usuario: ${pass.username} </p>
                 
                 <p> Contraseña: <input id="passwordFieldId" type="password" readonly value="${pass.password}">   <button class="btn-show" data-id="${doc.id}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 19 20">
+                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 19 20">
                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                         <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                 </svg>
                 </button></p>
 
-                <button class="btn btn-danger btn-delete"  data-id="${doc.id}">Borrar</button>
-                <button class="btn btn-primary btn-edit" data-id="${doc.id}">Modificar</button>
+                <button class="btn btn-danger btnList btn-delete"  data-id="${doc.id}">Borrar</button>
+                <button class="btn btn-primary btnList btn-edit" data-id="${doc.id}">Modificar</button>
                 <hr>
              </div > `;
         });
