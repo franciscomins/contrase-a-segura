@@ -17,7 +17,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     passForm.reset();
     const querySnapshot = await getPass()
 
-
     onGetPass((querySnapshot) => {
         passContainer.innerHTML = "";
 
@@ -27,6 +26,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             passContainer.innerHTML += `
        
             <div class="container mb-5 mt-3">
+            <hr>
                 <h5 class="mt-3 h1"> ${pass.site}</h5>
 
                 <p>Usuario: ${pass.username} </p>
@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
                 <button class="btn btn-danger btnList btn-delete"  data-id="${doc.id}">Borrar</button>
                 <button class="btn btn-primary btnList btn-edit" data-id="${doc.id}">Modificar</button>
-                <hr>
+                
              </div > `;
         });
 
