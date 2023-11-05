@@ -52,6 +52,9 @@ window.addEventListener('DOMContentLoaded', async () => {
                     deletePass(dataset.id)
                     alert("Contraseña eliminada correctamente");
                     window.scrollTo(0, 0);
+                    window.navigator.vibrate([500]);
+
+
 
                 }catch(error){
                     console.log(error);
@@ -139,7 +142,7 @@ window.addEventListener('DOMContentLoaded', async () => {
                         </svg>`;
                         isShowingPassword = false;
                         btn.disabled = false; // Habilita el botón nuevamente
-                    }, 10000); // 10 segundos en milisegundos
+                    }, 5000); // 10 segundos en milisegundos
                 }
             });
         });
