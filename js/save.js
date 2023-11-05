@@ -27,21 +27,45 @@ window.addEventListener('DOMContentLoaded', async () => {
        
             <div class="container mb-5 mt-3">
             <hr>
-                <h5 class="mt-3 h1"> ${pass.site}</h5>
-
-                <p>Usuario: ${pass.username} </p>
-                
-                <p> Contraseña: <input id="passwordFieldId" type="password" readonly value="${pass.password}">   <button class="btn-show" data-id="${doc.id}">
-                <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 19 20">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                </svg>
-                </button></p>
-
-                <button class="btn btn-danger btnList btn-delete"  data-id="${doc.id}">Borrar</button>
-                <button class="btn btn-primary btnList btn-edit" data-id="${doc.id}">Modificar</button>
-                
-             </div > `;
+            <div class="row">
+        
+                <div class="col-md-12">
+                    <h5 class="mt-3 h1" id="pass-site"> ${pass.site}</h5>
+                </div>
+        
+                <div class="col-md-12" id="pass-user">
+                    <label>Usuario: ${pass.username} </label>
+                </div>
+        
+                <div class="col-md-6">
+        
+                  
+                        <div class="input-group  mt-3">
+        
+                            <input readonly id="passwordFieldId" type="password" value="${pass.password}" class="form-control">
+                            <button data-id="${doc.id}" class="btn btn-outline-secondary btn-show " type="button"
+                                id="button-addon2">
+        
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                                    class="bi bi-eye-fill" viewBox="0 0 16 16"">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                </svg>
+                            </button>
+                           
+                        </div>
+                   
+        
+                </div>
+        
+                <div class="col-md-12">
+        
+                    <button class="btn btn-danger btnList btn-delete" data-id="${doc.id}">Borrar</button>
+                    <button class="btn btn-primary btnList btn-edit" data-id="${doc.id}">Modificar</button>
+                </div>
+        
+            </div>
+        </div>`;
         });
 
 
@@ -126,20 +150,22 @@ window.addEventListener('DOMContentLoaded', async () => {
         
                     passwordField.type = 'text'; // Muestra la contraseña
                     btn.innerHTML = `
-                        <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 19 20">
-                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
-                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                        </svg>`;
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-eye-slash-fill" viewBox="0 0 16 16">
+                        <path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+                        <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>
+                        </svg>
+                        `;
                     isShowingPassword = true;
                     // Deshabilita el botón durante 10 segundos
                     btn.disabled = true;
                     setTimeout(() => {
                         passwordField.type = 'password';
                         btn.innerHTML = `
-                        <svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 19 20">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                         <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
-                        </svg>`;
+                        </svg>
+                        `;
                         isShowingPassword = false;
                         btn.disabled = false; // Habilita el botón nuevamente
                     }, 5000); // 10 segundos en milisegundos
