@@ -55,10 +55,14 @@
           <h1 class="h1">Generador de Contraseñas</h1>
 
           <div class="h5">
-            <p>Longitud de la contraseña: <input type="number" id="length" value="12"></p>
+            <p>Longitud de la contraseña: <input type="number" style="width: 60px; height: 30px;" id="length" value="12"></p>
             <p>Caracteres especiales: <input style="width: 25px; height: 25px;" type="checkbox" id="specialChars" checked></p>
-            <p>Generar contraseña: <button class="btn btn-dark btnList" onclick="generatePassword()">Generar</button></p>
-            <p>Contraseña generada: <input type="text" id="password" readonly></p>
+            <p>Generar contraseña: </p>
+            <button class="btn btn-dark mb-4"  
+            style="width: 100px; height: 50px;  font-size: 20px;
+            " onclick="generatePassword()">Generar</button>
+            <p>Contraseña generada: </p>
+            <input type="text" class="mt-2" id="password" readonly>
           </div>
           <br> 
         </div>
