@@ -134,13 +134,13 @@ window.addEventListener('DOMContentLoaded', async () => {
                                         icon: 'ruta/a/imagen.png' // Reemplaza con la ruta de tu imagen de notificación
         
                                     });
-                                    window.navigator.vibrate([1000]);
+                                    
                                     // Agregar un evento de clic a la notificación
                                     notification.addEventListener('click', () => {
                                         // Acción a realizar cuando se hace clic en la notificación
                                         console.log('La notificación fue clicada');
                                     });
-                                    window.navigator.vibrate([1000]);
+                                    
                                 }
                             })
                             .catch(error => {
@@ -166,8 +166,10 @@ window.addEventListener('DOMContentLoaded', async () => {
                         <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
                         </svg>
                         `;
+                        window.navigator.vibrate([3000]);
                         isShowingPassword = false;
                         btn.disabled = false; // Habilita el botón nuevamente
+
                     }, 5000); // 10 segundos en milisegundos
                 }
             });
