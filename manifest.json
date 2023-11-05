@@ -1,0 +1,17 @@
+{
+    "name": "secure password",
+    "short_name": "secure password",
+    "theme_color": "#04195f",
+    "background_color": "#04195f",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "./",
+    "start_url": "./",
+    "icons": [
+        {
+            "src": "./img/logo.jpg",
+            "type": "image/jpg",
+            "sizes": "512x512"
+        }
+    ]
+}
